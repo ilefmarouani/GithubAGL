@@ -1,0 +1,29 @@
+@startuml
+left to right direction
+actor Client
+actor Administrateur
+rectangle "Diagramme de cas d'utilisation de gestion des réservation d'un hôtel" {
+  usecase "Passer une réservation" as UC1
+  usecase "Annuler une réservation" as UC2
+  usecase "consulter une réservation" as UC3
+  usecase "Consulter l'historique" as UC4
+  usecase "S'authentifier" as UC5
+  usecase "Gèrer les clients" as UC6
+  usecase "Gèrer les chambres" as UC7
+  usecase "Gèrer les réservations" as UC8
+}
+Client -- UC1
+Client -- UC2
+Client -- UC3
+Client -- UC4
+Administrateur -- UC6
+Administrateur -- UC7
+Administrateur -- UC8
+UC1 ..> UC5 : <<include>>
+UC2 ..> UC5 : <<include>>
+UC3 ..> UC5 : <<include>>
+UC4 ..> UC5 : <<include>>
+UC6 ..> UC5 : <<include>>
+UC7 ..> UC5 : <<include>>
+UC8 ..> UC5 : <<include>>
+@enduml

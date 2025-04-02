@@ -1,0 +1,54 @@
+@startuml
+
+class Utilisateur {
+    id
+    nom
+    prenom
+    mot_de_passe
+    Email
+}
+
+class Client {
+    Telephone
+    +Ajouter_reservation()
+    +Annuler_reservation()
+    +Consulter_reservation()
+}
+
+class Admin {
+}
+
+class Chambre {
+    id_chambre
+    Type
+    Etat_chambre
+    Prix
+    +Ajouter_chambre()
+    +Consulter_chambre()
+    +Supprimer_chambre()
+}
+
+class Reservation {
+    id_Reservation
+    Date_debut
+    Date_fin
+    Montant
+    Type_sejour
+    nombre_adulte
+    nombre_enfant
+    +Ajouter_reservation()
+    +Consulter_reservation()
+    +Supprimer_reservation()
+    +Calculer_montant()
+}
+
+Utilisateur <|-- Client
+Utilisateur <|-- Admin
+Client --|> Reservation : "1,1" Ajouter
+Admin --|> Reservation : "1,*" Gérer
+Client --|> Reservation : "1,1" Consulter
+Admin --|> Client : "1,1" Gérer
+Admin --|> Chambre : "1,*" Gérer
+Chambre --|> Reservation : "1,*" Contenir
+
+@enduml
