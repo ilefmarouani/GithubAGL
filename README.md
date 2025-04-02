@@ -37,3 +37,27 @@ Cette application vise à **simplifier la gestion des chambres, des clients et d
 #### 🔐 **Système**  
 - 🔑 **Authentifier les utilisateurs**.  
 - 🔒 **Assurer l'intégrité et la sécurité des données**.  
+
+## 3️⃣ Diagrammes UML
+
+### a) Diagramme de cas d'utilisation
+Voici le diagramme représentant les cas d'utilisation principaux de l'application.
+
+![Diagramme Cas d'Utilisation](Diagrammes/diag_cas_utilisation.png)
+
+### b) Raffinement du diagramme de cas d'utilisation
+Le diagramme suivant reprèsente le raffinement des cas d'utilisation de l'admin .
+
+![Diagramme de Cas d'utilisation](Diagrammes/raffinement_cas_utilisation.png)
+
+### c) Diagramme de classes
+Le diagramme suivant illustre la structure des classes principales du système.
+
+![Diagramme de Classes](Diagrammes/diag_classe.png)
+
+
+
+
+
+
+
