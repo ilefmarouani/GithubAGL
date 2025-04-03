@@ -46,7 +46,7 @@ Voici le diagramme représentant les cas d'utilisation principaux de l'applicati
 ![Diagramme Cas d'Utilisation](Diagrammes/diag_cas_utilisation.png)
 
 ### b) Raffinement du diagramme de cas d'utilisation
-Le diagramme suivant reprèsente le raffinement des cas d'utilisation de l'admin .
+Le diagramme suivant reprèsente le raffinement des cas d'utilisation de l'Admin .
 
 ![Diagramme de Cas d'utilisation](Diagrammes\raffinement_cas_utilisation.png)
 
