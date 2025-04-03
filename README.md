@@ -60,6 +60,11 @@ Le diagramme suivant illustre les interactions principales entre les acteurs et 
 
 ![Diagramme de séquence système](Diagrammes/diag_sequence_systeme.png)
 
+### e) Diagramme de séquence détaillé - Authentification
+Le diagramme suivant représente en détail le processus d’authentification d’un utilisateur (client par défaut). Il montre les interactions entre l’utilisateur et le système, ainsi que la validation des informations d’identification avant d’accorder l’accès aux fonctionnalités correspondantes.
+
+![Diagramme de séquence système](Diagrammes/diag_sequence_authentification.png)
+
 
 
 
