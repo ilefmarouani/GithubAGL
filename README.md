@@ -65,6 +65,36 @@ Le diagramme suivant représente en détail le processus d’authentification d�
 
 ![Diagramme de séquence système](Diagrammes/diag_sequence_authentification.png)
 
+## 4️⃣ Priorités des cas d’utilisation
+
+## Sprint 1 : Cas d’utilisation de haute priorité
+
+Les fonctionnalités suivantes sont considérées comme essentielles et seront développées en priorité :
+
+#### 🛑 1. Annuler une réservation
+
+Ce cas d’utilisation permet à un client d’annuler une réservation existante sous certaines conditions (délai d’annulation autorisé, paiement effectué, etc.).
+
+## 🔹 Diagramme de Séquence Détaillé – Annulation d’une Réservation
+Le diagramme suivant illustre les interactions nécessaires pour que l'admin annule une réservation.
+![Diagramme de séquence système](Diagrammes/diag_sequence_annuler_reservation.png)
+
+## 🔹 Diagramme d’Activité – Annulation d’une Réservation
+Le diagramme ci-dessous représente le flux des actions pour traiter une annulation de réservation.
+![Diagramme de séquence système](Diagrammes/diag_activite_annuler_reservation.png)
+
+#### 🏨 2. Réservation d’une chambre
+
+Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre en fonction des disponibilités et de ses préférences.
+
+ ## 🔹 Diagramme de Séquence Détaillé – Réservation d’une Chambre
+Ce diagramme montre les étapes d’interaction entre l'Admin et le système pour effectuer une réservation.
+![Diagramme de séquence système](Diagrammes/diag_sequence_ajout_reservation.png)
+
+## 🔹 Diagramme d’Activité – Réservation d’une Chambre
+Le diagramme d’activité suivant décrit le processus permettant à l'Admin de réserver une chambre.
+![Diagramme de séquence système](Diagrammes/diag_activite_ajout_reservation.png)
+
 
 
 
