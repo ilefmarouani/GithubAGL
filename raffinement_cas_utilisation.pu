@@ -1,0 +1,48 @@
+@startuml
+left to right direction
+
+actor Administrateur
+
+rectangle "Gérer les clients" {
+  usecase "Gérer les clients" as UC6
+  usecase "Ajouter un client" as UC6_1
+  
+  usecase "Supprimer un client" as UC6_3
+  usecase "Consulter la liste des clients" as UC6_4
+  
+  UC6 ..> UC6_1 : <<extend>>
+  
+  UC6 ..> UC6_3 : <<extend>>
+  UC6 ..> UC6_4 : <<extend>>
+}
+
+rectangle "Gérer les chambres" {
+  usecase "Gérer les chambres" as UC7
+  usecase "Ajouter une chambre" as UC7_1
+  
+  usecase "Supprimer une chambre" as UC7_3
+  usecase "Consulter la disponibilité" as UC7_4
+
+  UC7 ..> UC7_1 : <<extend>>
+  
+  UC7 ..> UC7_3 : <<extend>>
+  UC7 ..> UC7_4 : <<extend>>
+}
+
+rectangle "Gérer les réservations" {
+  usecase "Gérer les réservations" as UC8
+  usecase "Ajouter une réservation" as UC8_1
+  
+  usecase "Annuler une réservation (Admin)" as UC8_3
+  usecase "Consulter les réservations" as UC8_4
+
+  UC8 ..> UC8_1 : <<extend>>
+  
+  UC8 ..> UC8_3 : <<extend>>
+  UC8 ..> UC8_4 : <<extend>>
+}
+
+Administrateur -- UC6
+Administrateur -- UC7
+Administrateur -- UC8
+@enduml
