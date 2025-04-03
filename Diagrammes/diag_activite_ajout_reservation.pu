@@ -1,0 +1,35 @@
+@startuml
+start
+
+:Administrateur connecté;
+:Afficher menu de gestion des réservations;
+:Administrateur sélectionne "Ajouter une réservation";
+
+:Demander les informations de réservation;
+:Administrateur saisit les informations requises;
+ 
+if (Date de fin > Date de début ?) then (Non)
+    :Afficher erreur "La date de fin doit être après la date de début!";
+    stop
+else (Oui)
+    :Vérifier si le client existe;
+    if (Client existe ?) then (Non)
+        :Afficher erreur "Client invalide!";
+        stop
+    else (Oui)
+        :Vérifier si la chambre existe et est disponible;
+        if (Chambre disponible ?) then (Non)
+            :Afficher erreur "Chambre non disponible!";
+            stop
+        else (Oui)
+            :Calculer le montant total;
+            :Générer un ID unique pour la réservation;
+            :Enregistrer la réservation;
+            :Mettre à jour l'état de la chambre (occupée);
+            :Afficher confirmation "Réservation ajoutée avec succès!";
+        endif
+    endif
+endif
+
+stop
+@enduml
