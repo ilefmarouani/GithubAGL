@@ -1,0 +1,35 @@
+@startuml
+autonumber
+
+actor Administrateur
+participant "Interface Utilisateur" as UI
+participant "Système de Réservation" as System
+participant "Base de Données" as DB
+
+== Accès à la gestion des réservations ==
+Administrateur -> UI: Accéder au menu de gestion des réservations
+UI -> System: Afficher options de gestion des réservations
+Administrateur -> UI: Sélectionner "Annuler une réservation"
+
+== Saisie de l'ID de la réservation ==
+System -> UI: Demander l'ID de la réservation
+Administrateur -> UI: Saisir l'ID de la réservation
+UI -> System: Transmettre l'ID de la réservation
+
+== Vérification de la réservation ==
+System -> DB: Rechercher la réservation par ID
+alt Réservation introuvable
+    System -> UI: Afficher "Aucune réservation correspondante trouvée"
+    UI -> Administrateur: Afficher message d'erreur
+    return
+end
+
+== Annulation de la réservation ==
+System -> DB: Mettre à jour l'état de la chambre (disponible)
+System -> DB: Supprimer la réservation
+
+== Confirmation ==
+System -> UI: Afficher "Réservation annulée avec succès !"
+UI -> Administrateur: Afficher confirmation
+
+@enduml
