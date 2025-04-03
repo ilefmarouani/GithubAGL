@@ -55,6 +55,11 @@ Le diagramme suivant illustre la structure des classes principales du système.
 
 ![Diagramme de Classe](Diagrammes/diag_classe.png)
 
+### d) Diagramme de séquence système
+Le diagramme suivant illustre les interactions principales entre les acteurs et le système lors des différents processus de gestion des réservations d’hôtel.
+
+![Diagramme de séquence système](Diagrammes/diag_sequence_systeme.png)
+
 
 
 
