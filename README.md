@@ -77,11 +77,11 @@ Ce cas d’utilisation permet à un client d’annuler une réservation existant
 
 ## 🔹 Diagramme de Séquence Détaillé – Annulation d’une Réservation
 Le diagramme suivant illustre les interactions nécessaires pour que l'admin annule une réservation.
-![Diagramme de séquence système](Diagrammes/diag_sequence_annuler_reservation.png)
+![Diagramme de séquence annuler_reservation](Diagrammes/diag_sequence_annuler_reservation.png)
 
 ## 🔹 Diagramme d’Activité – Annulation d’une Réservation
 Le diagramme ci-dessous représente le flux des actions pour traiter une annulation de réservation.
-![Diagramme de séquence système](Diagrammes/diag_activite_annuler_reservation.png)
+![Diagramme  d'acrtivite annuler_reservation](Diagrammes/diag_activite_annuler_reservation.png)
 
 #### 🏨 2. Réservation d’une chambre
 
@@ -89,11 +89,11 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 
  ## 🔹 Diagramme de Séquence Détaillé – Réservation d’une Chambre
 Ce diagramme montre les étapes d’interaction entre l'Admin et le système pour effectuer une réservation.
-![Diagramme de séquence système](Diagrammes/diag_sequence_ajout_reservation.png)
+![Diagramme de séquence ajout_reservation](Diagrammes/diag_sequence_ajout_reservation.png)
 
 ## 🔹 Diagramme d’Activité – Réservation d’une Chambre
 Le diagramme d’activité suivant décrit le processus permettant à l'Admin de réserver une chambre.
-![Diagramme de séquence système](Diagrammes/diag_activite_ajout_reservation.png)
+![Diagramme d'acrtivite ajout_reservation](Diagrammes/diag_activite_ajout_reservation.png)
 
 
 
