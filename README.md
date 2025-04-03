@@ -48,7 +48,7 @@ Voici le diagramme représentant les cas d'utilisation principaux de l'applicati
 ### b) Raffinement du diagramme de cas d'utilisation
 Le diagramme suivant reprèsente le raffinement des cas d'utilisation de l'Admin .
 
-![Diagramme de Cas d'utilisation](Diagrammes\raffinement_cas_utilisation.png)
+![Diagramme de Cas d'utilisation](Diagrammes/raffinement_cas_utilisation.png)
 
 ### c) Diagramme de classes
 Le diagramme suivant illustre la structure des classes principales du système.
