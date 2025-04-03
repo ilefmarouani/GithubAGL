@@ -1,0 +1,24 @@
+@startuml
+autonumber
+
+actor Administrateur
+
+participant "Interface utilisateur" as UI
+participant Système
+
+Administrateur -> UI : Accède au menu de gestion des réservations
+Administrateur -> UI : Sélectionne "Ajouter une réservation"
+UI -> Système : Demande les informations nécessaires (ID client, ID chambre, etc.)
+Administrateur -> UI : Saisit les informations demandées
+UI -> Système : Envoie les informations saisies
+Système -> Système : Vérifie les informations (dates, client, chambre)
+alt Informations valides
+    Système -> Système : Calcule le montant total
+    Système -> Système : Génère un ID de réservation unique
+    Système -> Système : Enregistre la réservation
+    Système -> Système : Met à jour l'état de la chambre (occupée)
+    Système -> UI : Affiche "Réservation ajoutée avec succès !"
+else Informations invalides
+    Système -> UI : Affiche un message d'erreur approprié
+end
+@enduml
