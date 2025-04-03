@@ -1,54 +1,64 @@
 @startuml
+' Définition des classes
 
 class Utilisateur {
-    id
-    nom
-    prenom
-    mot_de_passe
-    Email
+  id : int
+  nom : string
+  prenom : string
+  mot_de_passe : string
+  Email : string
 }
 
 class Client {
-    Telephone
-    +Ajouter_reservation()
-    +Annuler_reservation()
-    +Consulter_reservation()
+  Telephone : string
+  Ajouter_client()
+  Annuler_client()
+  Consulter_client()
 }
 
 class Admin {
+  Ajouter_chambre()
+  Consulter_chambre()
+  Supprimer_chambre()
 }
 
 class Chambre {
-    id_chambre
-    Type
-    Etat_chambre
-    Prix
-    +Ajouter_chambre()
-    +Consulter_chambre()
-    +Supprimer_chambre()
+  id_chambre : int
+  Type : string
+  Etat_chambre : string
+  Prix : float
+  Ajouter_chambre()
+  Consulter_chambre()
+  Supprimer_chambre()
 }
 
 class Reservation {
-    id_Reservation
-    Date_debut
-    Date_fin
-    Montant
-    Type_sejour
-    nombre_adulte
-    nombre_enfant
-    +Ajouter_reservation()
-    +Consulter_reservation()
-    +Supprimer_reservation()
-    +Calculer_montant()
+  id_Reservation : int
+  Date_debut : date
+  Date_fin : date
+  Montant : float
+  Type_sejour : string
+  nombre_adulte : int
+  nombre_enfant : int
+  Ajouter_reservation()
+  Consulter_reservation()
+  Supprimer_reservation()
+  Calculer_montant()
 }
+
+' Héritage
 
 Utilisateur <|-- Client
 Utilisateur <|-- Admin
-Client --|> Reservation : "1,1" Ajouter
-Admin --|> Reservation : "1,*" Gérer
-Client --|> Reservation : "1,1" Consulter
-Admin --|> Client : "1,1" Gérer
-Admin --|> Chambre : "1,*" Gérer
-Chambre --|> Reservation : "1,*" Contenir
+
+' Relations
+Client "1..*" -- "1..1" Admin : Gérer
+Client "1..1" -- "1..*" Reservation : Ajouter
+Client "1..1" -- "1..*" Reservation : consulter
+Client "1..1" -- "1..*" Reservation : Supprimer
+Admin "1..1" -- "1..*" Chambre: Gérer
+Admin "1..1" -- "1..*"Reservation: Gérer
+Chambre "1..*" -- "1..1" Reservation : Contenir
+
 
 @enduml
