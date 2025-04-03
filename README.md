@@ -1,8 +1,8 @@
 # GithubAGL
 #  Application de Réservations d'Hôtel  
 
-** Date de soumission :** 07-04-2025  
-** Auteurs :** Ilef Marouani - Linda Hjjeji - Chayma kouki - Molka Mansouri 
+ Date de soumission : 07-04-2025  
+ Auteurs : Ilef Marouani - Linda Hajjeji - Chayma kouki - Molka Mansouri 
 
 ---
 
