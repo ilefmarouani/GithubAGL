@@ -95,6 +95,110 @@ Ce diagramme montre les étapes d’interaction entre l'Admin et le système pou
 Le diagramme d’activité suivant décrit le processus permettant à l'Admin de réserver une chambre.
 ![Diagramme d'acrtivite ajout_reservation](Diagrammes/diag_activite_ajout_reservation.png)
 
+# 5️⃣Spécifications et Tests de Validation  
+
+## 📌 Cas d’utilisation : Annuler une réservation  
+
+### ✅ Préconditions  
+- **∧ ID de la réservation bien formé** (¬ null ∧ ¬ vide)  
+- **∧ La réservation existe** dans le système  
+- **∧ La réservation est toujours active** (non expirée)  
+- **∧ L'administrateur est bien authentifié**  
+
+### 📖 Scénario principal  
+1. **L'administrateur accède au menu de gestion des réservations**  
+   - Il interagit avec l'interface utilisateur.  
+2. **Il sélectionne l'option "Annuler une réservation"**  
+3. **Le système demande l’ID de la réservation**  
+4. **L'administrateur saisit l’ID de la réservation**  
+5. **Le système vérifie l'existence et la validité de la réservation**  
+   - Vérifie si la réservation est active et non annulée.  
+6. **Si la réservation est valide, le système :**  
+   - Marque la chambre comme **disponible**.  
+   - Supprime la réservation de la **base de données**.  
+   - Met à jour le **nombre de réservations du client**.  
+   - Affiche un message ✅ **"Réservation annulée avec succès !"**  
+7. **Si la réservation n'existe pas ou est invalide, le système :**  
+   - Affiche un message ❌ **"Aucune réservation correspondante trouvée !"**  
+
+### 🎯 Postconditions  
+- ✅ **∧ La réservation est supprimée** du système.  
+- ✅ **∧ La chambre est marquée disponible**.  
+- ✅ **∧ Le nombre total de réservations du client est mis à jour**.  
+
+### 📊 Table de décision des tests  
+
+| **Précondition**                                        | 1  | 2  | 3  | 4  | 5  | 6  | 7  |
+|---------------------------------------------------------|----|----|----|----|----|----|----|
+| **ID réservation bien formé (¬ null ∧ ¬ vide)**        | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| **Réservation existe dans le système**                 | -  | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| **Réservation toujours active (non expirée)**          | -  | -  | ❌  | ✅  | ✅  | ✅  | ✅  |
+| **Administrateur authentifié**                         | -  | -  | -  | ❌  | ✅  | ✅  | ✅  |
+| **Postcondition**                                      |    |    |    |    |    |    |    |
+| **Réservation supprimée du système**                   | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  | ✅  |
+| **Chambre marquée comme disponible**                   | -  | -  | -  | -  | -  | ❌  | ✅  |
+| **Nombre total de réservations mis à jour**            | ❌  | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  |
+| **Nombre de jeux de tests**                            | 2  | 1  | 1  | 1  | 1  | 1  | 1  |
+
+---
+
+## 📌 Cas d’utilisation : Réservation d’une chambre  
+
+### ✅ Préconditions  
+- **∧ ID du client bien formé** (¬ null ∧ ¬ vide)  
+- **∧ ID de la chambre bien formé** (¬ null ∧ ¬ vide)  
+- **∧ Date de début et date de fin bien formées** (¬ null ∧ date_fin > date_debut)  
+- **∧ Le client existe** dans le système  
+- **∧ Le client n’a pas d’impayés ou restrictions**  
+- **∧ La chambre existe et est disponible**  
+
+### 📖 Scénario principal  
+1. **L'administrateur accède au menu de gestion des réservations**  
+2. **Il sélectionne "Ajouter une réservation"**  
+3. **Le système demande les informations nécessaires :**  
+   - ID du client, ID de la chambre  
+   - Nombre d'adultes et d'enfants  
+   - Type de séjour (Demi-pension / Pension complète)  
+   - Date de début et de fin  
+4. **L'administrateur saisit les informations**  
+5. **Le système vérifie les données**  
+   - **La date de fin > date de début**  
+   - **Le client existe et n’a pas d'impayés**  
+   - **La chambre est disponible**  
+6. **Si tout est valide, le système :**  
+   - ✅ Calcule le **montant total**  
+   - ✅ Génère un **ID unique**  
+   - ✅ Enregistre la **réservation**  
+   - ✅ Marque la **chambre comme occupée**  
+   - ✅ Affiche **"Réservation ajoutée avec succès !"**  
+7. **Si une condition échoue :**  
+   - ❌ **Message d'erreur correspondant**  
+
+### 🎯 Postconditions  
+- ✅ **∧ La réservation est enregistrée**  
+- ✅ **∧ La chambre est marquée comme occupée**  
+- ✅ **∧ Le nombre total de réservations du client est mis à jour**  
+
+### 📊 Table de décision des tests  
+
+| **Précondition**                                       | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  |
+|--------------------------------------------------------|----|----|----|----|----|----|----|----|
+| **ID du client bien formé (¬ null ∧ ¬ vide)**         | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| **ID de la chambre bien formé (¬ null ∧ ¬ vide)**     | -  | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| **Date de début et de fin bien formées**              | -  | -  | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| **Client existe dans le système**                     | -  | -  | -  | ❌  | ✅  | ✅  | ✅  | ✅  |
+| **Chambre existe et disponible**                      | -  | -  | -  | -  | ❌  | ✅  | ✅  | ✅  |
+| **Postcondition**                                     |    |    |    |    |    |    |    |    |
+| **Réservation ajoutée**                               | ❌  | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  | ✅  |
+| **Chambre marquée comme occupée**                     | -  | -  | -  | -  | -  | -  | ❌  | ✅  |
+| **Nombre total de réservations mis à jour**           | ❌  | ❌  | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  |
+| **Nombre de jeux de tests**                           | 2  | 2  | 2  | 1  | 1  | 1  | 1  | 1  |
+
+
+
+
+
+
 
 
 
