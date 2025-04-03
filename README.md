@@ -53,7 +53,7 @@ Le diagramme suivant reprèsente le raffinement des cas d'utilisation de l'admin
 ### c) Diagramme de classes
 Le diagramme suivant illustre la structure des classes principales du système.
 
-![Diagramme de Classes](Diagrammes\diag_classe.png)
+![Diagramme de Classes](Diagrammes/diag_classe.png)
 
 
 
