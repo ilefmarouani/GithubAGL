@@ -1,0 +1,22 @@
+@startuml
+start
+
+:Administrateur connecté;
+:Afficher menu de gestion des réservations;
+:Administrateur sélectionne "Annuler une réservation";
+
+:Demander l'ID de la réservation;
+:Administrateur saisit l'ID de la réservation;
+
+:Rechercher la réservation;
+if (Réservation trouvée ?) then (Non)
+    :Afficher erreur "Aucune réservation correspondante trouvée!";
+    stop
+else (Oui)
+    :Mettre à jour l'état de la chambre (disponible);
+    :Supprimer la réservation du système;
+    :Afficher confirmation "Réservation annulée avec succès!";
+endif
+
+stop
+@enduml
