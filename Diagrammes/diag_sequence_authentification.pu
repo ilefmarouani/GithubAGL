@@ -1,0 +1,31 @@
+@startuml
+autonumber
+
+title Authentification
+
+participant Client
+participant "Interface client" as InterfaceClient
+participant "Système d'authentification" as SystemeAuthentification
+participant "Base de données" as BaseDeDonnees
+
+Client -> InterfaceClient : Accéder à la page de connexion
+InterfaceClient -> InterfaceClient :Saisir email et password
+InterfaceClient -> InterfaceClient : Clique sur "se connecter"
+InterfaceClient -> SystemeAuthentification :  Verifieridentification(email,password)
+SystemeAuthentification -> BaseDeDonnees :  rechercherutilisateur(email)
+BaseDeDonnees --> SystemeAuthentification :  Informations utilisateur
+SystemeAuthentification -> SystemeAuthentification :  Verifier password
+SystemeAuthentification --> InterfaceClient :  Resultat_authentification
+InterfaceClient -> Client :  Affiche resultat authentification
+
+alt authentification réussie
+    InterfaceClient -> Client : rediriger vers le menu_client
+else authentification échouée
+    InterfaceClient -> Client :  message erreur
+end
+
+note over InterfaceClient
+Option pour creer un compte
+end note
+
+@enduml
