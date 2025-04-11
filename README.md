@@ -224,7 +224,7 @@ Diagramme de séquence représentant le **scénario principal** de l’ajout d�
 
 📎 Diagramme :
 
-![DSUC1 – Ajouter une réservation](Diagrammes/DSUC1_ajouter_reservation.png)
+![DSUC1 – Ajouter une réservation](Diagrammes/diag_ajouter_reservation.png)
 
 ---
 
@@ -234,7 +234,7 @@ Diagramme de séquence représentant le **scénario principal** de l’annulatio
 
 📎 Diagramme :
 
-![DSUC2 – Annuler une réservation](Diagrammes/DSUC2_annuler_reservation.png)
+![DSUC2 – Annuler une réservation](Diagrammes/diag_annuler_reservation.png)
 
 
 
