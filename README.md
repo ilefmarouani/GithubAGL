@@ -50,17 +50,7 @@ Le diagramme suivant reprèsente le raffinement des cas d'utilisation de l'admin
 
 ![Diagramme de Cas d'utilisation](Diagrammes/raffinement_cas_utilisation.png)
 
-### c) Diagramme de classes
-Le diagramme suivant illustre la structure des classes principales du système.
-
-![Diagramme de Classe](Diagrammes/diag_classe.png)
-
-### d) Diagramme de séquence système
-Le diagramme suivant illustre les interactions principales entre les acteurs et le système lors des différents processus de gestion des réservations d’hôtel.
-
-![Diagramme de séquence système](Diagrammes/diag_sequence_systeme.png)
-
-### e) Diagramme de séquence détaillé - Authentification
+### c) Diagramme de séquence détaillé - Authentification
 Le diagramme suivant représente en détail le processus d’authentification d’un utilisateur (client par défaut). Il montre les interactions entre l’utilisateur et le système, ainsi que la validation des informations d’identification avant d’accorder l’accès aux fonctionnalités correspondantes.
 
 ![Diagramme de séquence système](Diagrammes/diag_sequence_authentification.png)
@@ -75,26 +65,11 @@ Les fonctionnalités suivantes sont considérées comme essentielles et seront d
 
 Ce cas d’utilisation permet à un client d’annuler une réservation existante sous certaines conditions (délai d’annulation autorisé, paiement effectué, etc.).
 
-## 🔹 Diagramme de Séquence Détaillé – Annulation d’une Réservation
-Le diagramme suivant illustre les interactions nécessaires pour que l'admin annule une réservation.
-![Diagramme de séquence annuler_reservation](Diagrammes/diag_sequence_annuler_reservation.png)
-
-## 🔹 Diagramme d’Activité – Annulation d’une Réservation
-Le diagramme ci-dessous représente le flux des actions pour traiter une annulation de réservation.
-![Diagramme  d'acrtivite annuler_reservation](Diagrammes/diag_activite_annuler_reservation.png)
-
 #### 🏨 2. Réservation d’une chambre
 
 Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre en fonction des disponibilités et de ses préférences.
 
- ## 🔹 Diagramme de Séquence Détaillé – Réservation d’une Chambre
-Ce diagramme montre les étapes d’interaction entre l'Admin et le système pour effectuer une réservation.
-![Diagramme de séquence ajout_reservation](Diagrammes/diag_sequence_ajout_reservation.png)
-
-## 🔹 Diagramme d’Activité – Réservation d’une Chambre
-Le diagramme d’activité suivant décrit le processus permettant à l'Admin de réserver une chambre.
-![Diagramme d'acrtivite ajout_reservation](Diagrammes/diag_activite_ajout_reservation.png)
-
+ 
 # 5️⃣Spécifications et Tests de Validation  
 
 ## 📌 Cas d’utilisation : Annuler une réservation  
