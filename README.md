@@ -224,7 +224,7 @@ Diagramme de séquence représentant le **scénario principal** de l’ajout d�
 
 📎 Diagramme :
 
-![Diagramme de séquence ajout_reservation](Diagrammes/diag_sequence_ajout_reservation.png)
+![Diagramme de séquence ajout_reservation](Diagrammes/diag_sequence_ajout_dynamique.png)
 
 ---
 
@@ -234,7 +234,7 @@ Diagramme de séquence représentant le **scénario principal** de l’annulatio
 
 📎 Diagramme :
 
-![Diagramme de séquence annuler_reservation](Diagrammes/diag_sequence_annuler_reservation.png)
+![Diagramme de séquence annuler_reservation](Diagrammes/diag_sequence_annuler_dynamique.png)
 
 
 
