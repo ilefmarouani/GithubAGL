@@ -216,7 +216,25 @@ Le diagramme d’activité suivant décrit le processus permettant à l'Admin de
 ![Diagramme de Classes](Diagrammes/diag_classe_préliminaire.png)
 
 
+## 7️⃣ Conception Dynamique – Diagrammes de Séquence
 
+### 🛠️ Cas d'utilisation 1 : Ajouter une réservation (DSUC1)
+
+Diagramme de séquence représentant le **scénario principal** de l’ajout d’une réservation par l’administrateur.
+
+📎 Diagramme :
+
+![DSUC1 – Ajouter une réservation](Diagrammes/DSUC1_ajouter_reservation.png)
+
+---
+
+### 🛠️ Cas d'utilisation 2 : Annuler une réservation (DSUC2)
+
+Diagramme de séquence représentant le **scénario principal** de l’annulation d’une réservation par l’administrateur.
+
+📎 Diagramme :
+
+![DSUC2 – Annuler une réservation](Diagrammes/DSUC2_annuler_reservation.png)
 
 
 
