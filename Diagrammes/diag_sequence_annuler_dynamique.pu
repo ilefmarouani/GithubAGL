@@ -1,0 +1,38 @@
+@startuml
+autonumber
+
+actor Administrateur
+participant "Interface Utilisateur" as UI
+participant "Système de Réservation" as System
+participant "Base de Données" as DB
+
+== Accès à la fonctionnalité ==
+Administrateur -> UI: Accéder au menu "Réservations"
+UI -> System: Demander les options
+Administrateur -> UI: Choisir "Annuler une réservation"
+UI -> System: Demander ID de la réservation
+
+== Vérification de la précondition ==
+System -> DB: Rechercher la réservation par ID
+alt Réservation inexistante
+    System -> UI: Afficher "Réservation non trouvée"
+    UI -> Administrateur: Message d’erreur
+    return
+end
+
+System -> DB: Vérifier si réservation est active
+alt Réservation expirée
+    System -> UI: Afficher "Réservation déjà expirée"
+    UI -> Administrateur: Message d’erreur
+    return
+end
+
+== Traitement de l’annulation ==
+System -> DB: Supprimer la réservation
+System -> DB: Marquer la chambre comme disponible
+
+== Confirmation ==
+System -> UI: Afficher "Réservation annulée avec succès"
+UI -> Administrateur: Message de confirmation
+
+@enduml

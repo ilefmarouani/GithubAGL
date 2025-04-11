@@ -1,0 +1,52 @@
+@startuml
+autonumber
+
+actor Administrateur
+participant "Interface Utilisateur" as UI
+participant "Système de Réservation" as System
+participant "Base de Données" as DB
+
+== Accès à la fonctionnalité ==
+Administrateur -> UI: Accéder au menu "Réservations"
+UI -> System: Demander les options
+Administrateur -> UI: Choisir "Ajouter une réservation"
+UI -> System: Demander formulaire de réservation
+
+== Remplissage et envoi du formulaire ==
+System -> UI: Afficher formulaire (ID client, ID chambre, nb adultes, enfants, type séjour, dates)
+Administrateur -> UI: Saisir les informations
+UI -> System: Transmettre les données saisies
+
+== Vérification des préconditions ==
+System -> System: Vérifier que date_fin > date_debut
+alt Dates incohérentes
+    System -> UI: Afficher "Date de fin invalide"
+    UI -> Administrateur: Message d’erreur
+    return
+end
+
+System -> DB: Vérifier existence du client
+alt Client inexistant
+    System -> UI: Afficher "Client invalide"
+    UI -> Administrateur: Message d’erreur
+    return
+end
+
+System -> DB: Vérifier disponibilité de la chambre
+alt Chambre occupée
+    System -> UI: Afficher "Chambre indisponible"
+    UI -> Administrateur: Message d’erreur
+    return
+end
+
+== Création de la réservation ==
+System -> System: Calculer montant total
+System -> DB: Générer ID unique de réservation
+System -> DB: Enregistrer la réservation
+System -> DB: Mettre à jour état de la chambre (occupée)
+
+== Confirmation ==
+System -> UI: Afficher "Réservation ajoutée avec succès"
+UI -> Administrateur: Message de confirmation
+
+@enduml
