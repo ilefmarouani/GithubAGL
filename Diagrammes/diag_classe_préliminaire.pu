@@ -1,0 +1,40 @@
+@startuml
+class Utilisateur {
+  id : int
+  nom : string
+  prenom : string
+  mot_de_passe : string
+  email : string
+}
+
+class Client {
+  telephone : string
+}
+
+class Admin {
+}
+
+class Chambre {
+  id_chambre : int
+  type : string
+  etat : string
+  prix : float
+}
+
+class Reservation {
+  id_reservation : int
+  date_debut : date
+  date_fin : date
+  montant : float
+  type_sejour : string
+  nombre_adulte : int
+  nombre_enfant : int
+}
+
+Utilisateur <|-- Client
+Utilisateur <|-- Admin
+
+Client "1" -- "0..*" Reservation
+Reservation "1" -- "1" Chambre
+
+@enduml
