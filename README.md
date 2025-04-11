@@ -195,7 +195,25 @@ Le diagramme d’activité suivant décrit le processus permettant à l'Admin de
 | **Nombre de jeux de tests**                           | 2  | 2  | 2  | 1  | 1  | 1  | 1  | 1  |
 
 
+## 6️⃣ Conception Préliminaire – Diagramme de Classes
 
+### 🧠 Étape 1 : Identification des classes métier
+
+À partir du document de spécifications et des cas d’utilisation , nous avons identifié les **classes métier** suivantes :
+
+- **Utilisateur** : classe générale représentant une personne ayant un accès au système (héritée par Admin et Client).
+- **Client** : utilisateur pouvant effectuer, consulter ou annuler des réservations.
+- **Admin** : utilisateur responsable de la gestion des clients, chambres et réservations.
+- **Chambre** : unité disponible à la réservation, caractérisée par son type, son état et son prix.
+- **Reservation** : entité représentant l’action de réserver une chambre pour une période donnée.
+
+---
+
+### 🧱 Étape 2 : Diagramme de classes – version préliminaire
+
+📎 Diagramme de classes :
+
+![Diagramme de Classes](Diagrammes/diag_classe.png)
 
 
 
