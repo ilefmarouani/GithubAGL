@@ -213,7 +213,7 @@ Le diagramme d’activité suivant décrit le processus permettant à l'Admin de
 
 📎 Diagramme de classes :
 
-![Diagramme de Classes](Diagrammes/diag_classe.png)
+![Diagramme de Classes](Diagrammes/diag_classe_préliminaire.png)
 
 
 
