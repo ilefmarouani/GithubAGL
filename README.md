@@ -193,7 +193,7 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 
 ## 7️⃣ Conception Dynamique – Diagrammes de Séquence
 
-### 🛠️ Cas d'utilisation 1 : Ajouter une réservation (DSUC1)
+### 🛠️ Cas d'utilisation 1 : Ajouter une réservation 
 
 Diagramme de séquence représentant le **scénario principal** de l’ajout d’une réservation par l’administrateur.
 
@@ -203,7 +203,7 @@ Diagramme de séquence représentant le **scénario principal** de l’ajout d�
 
 ---
 
-### 🛠️ Cas d'utilisation 2 : Annuler une réservation (DSUC2)
+### 🛠️ Cas d'utilisation 2 : Annuler une réservation 
 
 Diagramme de séquence représentant le **scénario principal** de l’annulation d’une réservation par l’administrateur.
 
