@@ -1,0 +1,49 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam classAttributeIconSize 0
+
+package "Vue (View)" {
+  class InterfaceUtilisateur {
+    +afficherFormulaire()
+    +afficherMessage()
+    +afficherConfirmation()
+  }
+}
+
+package "Contrôleur (Controller)" {
+  class ReservationController {
+    +ajouterReservation()
+    +annulerReservation()
+    +consulterReservation()
+  }
+}
+
+package "Modèle (Model)" {
+  class Reservation {
+    -dateDebut : Date
+    -dateFin : Date
+    -montant : float
+    +calculerMontant()
+  }
+
+  class Client {
+    -nom : string
+    -prenom : string
+    -email : string
+  }
+
+  class Chambre {
+    -numero : int
+    -type : string
+    -etat : string
+    -prix : float
+  }
+}
+
+' Associations
+InterfaceUtilisateur --> ReservationController : actions utilisateur
+ReservationController --> Reservation : manipule
+ReservationController --> Client : consulte / vérifie
+ReservationController --> Chambre : vérifie / réserve
+ReservationController --> InterfaceUtilisateur : met à jour la vue
+@enduml
