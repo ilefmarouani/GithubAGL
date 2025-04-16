@@ -224,6 +224,25 @@ Diagramme de séquence représentant le **scénario principal** de l’annulatio
 ![Diagramme de séquence annuler_reservation](Diagrammes/diag_sequence_annuler_dynamique.png)
 
 
+# 🧩 Étape 8 : Conception détaillée
+
+## 8.1 Raffinement du diagramme de classes
+
+Le diagramme de classes initial a été raffiné pour mieux représenter les détails nécessaires à l’implémentation du système de réservation. Ce raffinement vise à préciser les attributs, les méthodes, les relations entre les entités, ainsi que les contraintes de gestion.
+
+![Diagramme de Classes](Diagrammes/diag_classe_préliminaire.png)
+
+## 8.2 Diagramme d'états-transitions de l’objet `Chambre`
+
+Le diagramme d’états-transitions suivant décrit le comportement dynamique de l’objet `Chambre`, en fonction des opérations exécutées sur le système.
+
+### 🔄 États de la chambre
+![Diagramme_etat_transition_chambre](Diagrammes/diag_etat_transition_chambre.png)
+
+
+
+
+
 
 
 
