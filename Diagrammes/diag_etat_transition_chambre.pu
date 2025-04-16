@@ -1,0 +1,13 @@
+@startuml
+state Chambre {
+  [*] --> EnConstruction
+  EnConstruction --> Consultable
+  Consultable --> Reservable
+Reservable --> Consultable
+  Reservable --> Réservé
+ Réservé --> Reservable
+  Reservable --> EnDestruction
+  Consultable --> EnDestruction
+  EnDestruction --> [*]
+}
+@enduml
