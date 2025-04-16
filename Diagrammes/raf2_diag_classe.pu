@@ -1,0 +1,87 @@
+@startuml
+' Mettre le diagramme en paysage
+left to right direction
+
+' Personnalisation graphique
+skinparam classAttributeIconSize 0
+skinparam class {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Black
+}
+skinparam defaultTextAlignment center
+
+' Énumération pour Type_sejour
+enum Type_sejour {
+    pension_complete
+    demi_pension
+}
+
+' Énumération pour Type_chambre
+enum Type_chambre {
+    simple
+    double
+    suite
+}
+
+
+
+' Classe Utilisateur
+class Utilisateur {
+    -id_: int
+    -nom_: string
+    -prenom_: string
+    -mot_de_passe_: string
+    -email_: string
+}
+
+' Classe Admin
+class Admin {
+}
+
+' Classe Client
+class Client {
+    -telephone_: string
++ajouterReservation()
+    +annulerReservation()
+    +consulterReservation()
+    
+}
+
+' Classe Chambre
+class Chambre {
+    -id_chambre_: int
+    -type_: Type_chambre
+    -etat_chambre_: string
+    -prix_: float
++ajouterChambre()
+    +consulterChambre()
+    +supprimerChambre()
+
+    
+}
+
+' Classe Reservation
+class Reservation {
+    -id_reservation_: int
+    -date_debut_: date
+    -date_fin_: date
+    -montant_: float
+    -type_sejour_: Type_sejour
+    -nombre_adulte_: int
+    -nombre_enfant_: int
++ajouterReservation()
+    +consulterReservation()
+    +supprimerReservation()
+    +calculerMontant()
+
+    
+}
+
+Utilisateur <|-- Admin
+Utilisateur <|-- Client
+Client "1" o-- "*" Reservation : fait
+Reservation "1" --o "*" Chambre : contient
+Admin "1" -- "*" Chambre : gère
+Admin "1" -- "*" Reservation : gère
+@enduml
