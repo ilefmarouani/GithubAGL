@@ -230,7 +230,7 @@ Diagramme de séquence représentant le **scénario principal** de l’annulatio
 
 Le diagramme de classes initial a été raffiné pour mieux représenter les détails nécessaires à l’implémentation du système de réservation. Ce raffinement vise à préciser les attributs, les méthodes, les relations entre les entités, ainsi que les contraintes de gestion.
 
-![Diagramme de Classes](Diagrammes/diag_classe_préliminaire.png)
+![Diagramme de Classes](Diagrammes/raf1_diag_classe_preliminaire.png)
 
 ## 8.2 Diagramme d'états-transitions de l’objet `Chambre`
 
