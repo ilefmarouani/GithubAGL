@@ -191,6 +191,18 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 ![Diagramme de Classes](Diagrammes/diag_classe_préliminaire.png)
 
 
+
+##  Patron de Conception Utilisé – MVC
+
+Nous avons adopté le patron de conception **Modèle-Vue-Contrôleur (MVC)** pour organiser notre application.  
+Ce modèle permet de séparer la logique métier (modèle), la gestion des interactions (contrôleur) et l'affichage (vue).
+
+📎 Diagramme de conception MVC utilisé dans notre projet :
+
+![Diagramme MVC](Diagrammes/patron_conception.png)
+
+
+
 ## 7️⃣ Conception Dynamique – Diagrammes de Séquence
 
 ### 🛠️ Cas d'utilisation 1 : Ajouter une réservation 
