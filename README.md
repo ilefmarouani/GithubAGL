@@ -226,7 +226,7 @@ Diagramme de séquence représentant le **scénario principal** de l’annulatio
 
 # 🧩 Étape 8 : Conception détaillée
 
-## 8.1 Raffinement du diagramme de classes
+## 8.1 Raffinement du diagramme de classe préliminaire
 
 Le diagramme de classes initial a été raffiné pour mieux représenter les détails nécessaires à l’implémentation du système de réservation. 
 
@@ -238,6 +238,133 @@ Le diagramme d’états-transitions suivant décrit le comportement dynamique de
 
 ### 🔄 États de la chambre
 ![Diagramme_etat_transition_chambre](Diagrammes/diag_etat_transition_chambre.png)
+
+## 8.3 Raffinement des diagrammes
+
+## Raffinement du diagramme de classe
+
+![Diagramme_claase-raffiné](Diagrammes/raf2_diag_classe.png)
+
+## Traduction du diagramme de séquence "Ajouter Réservation" en algorithme
+
+Procédure ajouterReservation(idClient, idChambre, dateDebut, dateFin, nbAdultes, nbEnfants, typeSejour)
+
+    // 1. Vérification des dates
+    Si dateFin ≤ dateDebut Alors
+        afficher("Date de fin invalide")
+        Retourner
+    Fin Si
+
+    // 2. Vérification de l'existence du client
+    client ← rechercherClientParId(idClient)
+    Si client = null Alors
+        afficher("Client invalide")
+        Retourner
+    Fin Si
+
+    // 3. Vérification de la disponibilité de la chambre
+    chambre ← rechercherChambreParId(idChambre)
+    Si chambre = null OU chambre.etat = "occupée" Alors
+        afficher("Chambre indisponible")
+        Retourner
+    Fin Si
+
+    // 4. Calcul du montant
+    montant ← calculerMontant(chambre, typeSejour, dateDebut, dateFin, nbAdultes, nbEnfants)
+
+    // 5. Génération d’un identifiant unique
+    idReservation ← genererIdReservation()
+
+    // 6. Création et enregistrement de la réservation
+    reservation ← nouvelle Réservation(
+        idReservation, dateDebut, dateFin, montant,
+        typeSejour, nbAdultes, nbEnfants, client, chambre
+    )
+
+    enregistrerReservation(reservation)
+
+    // 7. Mise à jour de l'état de la chambre
+    chambre.etat ← "occupée"
+    mettreAJourChambre(chambre)
+
+    // 8. Confirmation à l’utilisateur
+    afficher("Réservation ajoutée avec succès")
+
+Fin Procédure
+
+## Traduction du diagramme de séquence "Annuler Réservation" en algorithme
+
+Procédure annulerReservation(idReservation)
+
+    // 1. Vérification de l'existence de la réservation
+    reservation ← rechercherReservationParId(idReservation)
+    Si reservation = null Alors
+        afficher("Réservation non trouvée")
+        Retourner
+    Fin Si
+
+    // 2. Vérification de l’état de la réservation
+    Si reservation.estExpirée = vrai Alors
+        afficher("Réservation déjà expirée")
+        Retourner
+    Fin Si
+
+    // 3. Suppression de la réservation
+    supprimerReservation(reservation)
+
+    // 4. Mise à jour de l’état de la chambre associée
+    chambre ← reservation.chambre
+    chambre.etat ← "libre"
+    mettreAJourChambre(chambre)
+
+    // 5. Confirmation à l’administrateur
+    afficher("Réservation annulée avec succès")
+
+Fin Procédure
+
+## Traduction du diagramme Etat Transition de l'objet "chambre" en algorithme
+
+Procédure gererEtatChambre(etatActuel, action)
+
+    Selon (etatActuel)
+
+        Cas "EnConstruction":
+            Si action = "finirConstruction" Alors
+                etatActuel ← "Consultable"
+            Fin Si
+
+        Cas "Consultable":
+            Si action = "rendreReservable" Alors
+                etatActuel ← "Reservable"
+            Sinon Si action = "detruire" Alors
+                etatActuel ← "EnDestruction"
+            Fin Si
+
+        Cas "Reservable":
+            Si action = "réserver" Alors
+                etatActuel ← "Réservé"
+            Sinon Si action = "rendreNonReservable" Alors
+                etatActuel ← "Consultable"
+            Sinon Si action = "detruire" Alors
+                etatActuel ← "EnDestruction"
+            Fin Si
+
+        Cas "Réservé":
+            Si action = "libérer" Alors
+                etatActuel ← "Reservable"
+            Fin Si
+
+        Cas "EnDestruction":
+            etatActuel ← "Supprimée"  // état terminal
+
+    Fin Selon
+
+Fin Procédure
+
+
+
+
+
 
 
 
