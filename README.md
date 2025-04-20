@@ -63,7 +63,7 @@ Les fonctionnalités suivantes sont considérées comme essentielles et seront d
 
 #### 🛑 1. Annuler une réservation
 
-Ce cas d’utilisation permet à un client d’annuler une réservation existante sous certaines conditions (délai d’annulation autorisé, paiement effectué, etc.).
+Ce cas d’utilisation permet à un utilisateur (Admin) d’annuler une réservation existante sous certaines conditions (délai d’annulation autorisé, paiement effectué, etc.).
 
 #### 🏨 2. Réservation d’une chambre
 
@@ -213,6 +213,10 @@ Diagramme de séquence représentant le **scénario principal** de l’ajout d�
 
 ![Diagramme de séquence ajout_reservation](Diagrammes/diag_sequence_ajout_dynamique.png)
 
+### 🛠️ Raffinement du diagramme de séquence du cas d'utilisation 'Ajouter une réservation'
+
+![Diagramme de séquence ajout_reservation](Diagrammes/diag_sequence_ajout_reservation.png)
+
 ---
 
 ### 🛠️ Cas d'utilisation 2 : Annuler une réservation 
@@ -222,6 +226,10 @@ Diagramme de séquence représentant le **scénario principal** de l’annulatio
 📎 Diagramme :
 
 ![Diagramme de séquence annuler_reservation](Diagrammes/diag_sequence_annuler_dynamique.png)
+
+### 🛠️ Raffinement du diagramme de séquence du cas d'utilisation 'Annuler une réservation'
+
+![Diagramme de séquence annuler_reservation](Diagrammes/diag_sequence_annuler_reservation.png)
 
 
 # 🧩 Étape 8 : Conception détaillée
