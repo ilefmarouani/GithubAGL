@@ -28,11 +28,11 @@ enum Type_chambre {
 
 ' Classe Utilisateur
 class Utilisateur {
-    -id_: int
-    -nom_: string
-    -prenom_: string
-    -mot_de_passe_: string
-    -email_: string
+    #id_: int
+    #nom_: string
+    #prenom_: string
+    #mot_de_passe_: string
+    #email_: string
 }
 
 ' Classe Admin
