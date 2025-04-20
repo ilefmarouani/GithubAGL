@@ -213,9 +213,7 @@ Diagramme de séquence représentant le **scénario principal** de l’ajout d�
 
 ![Diagramme de séquence ajout_reservation](Diagrammes/diag_sequence_ajout_dynamique.png)
 
-### 🛠️ Raffinement du diagramme de séquence du cas d'utilisation 'Ajouter une réservation'
 
-![Diagramme de séquence ajout_reservation](Diagrammes/diag_sequence_ajout_reservation.png)
 
 ---
 
@@ -227,9 +225,6 @@ Diagramme de séquence représentant le **scénario principal** de l’annulatio
 
 ![Diagramme de séquence annuler_reservation](Diagrammes/diag_sequence_annuler_dynamique.png)
 
-### 🛠️ Raffinement du diagramme de séquence du cas d'utilisation 'Annuler une réservation'
-
-![Diagramme de séquence annuler_reservation](Diagrammes/diag_sequence_annuler_reservation.png)
 
 
 # 🧩 Étape 8 : Conception détaillée
