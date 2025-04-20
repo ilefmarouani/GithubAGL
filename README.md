@@ -157,18 +157,18 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 
 ### 📊 Table de décision des tests  
 
-| **Précondition**                                       | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  |
-|--------------------------------------------------------|----|----|----|----|----|----|----|----|
-| **ID du client bien formé (¬ null ∧ ¬ vide)**         | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| **ID de la chambre bien formé (¬ null ∧ ¬ vide)**     | -  | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| **Date de début et de fin bien formées**              | -  | -  | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| **Client existe dans le système**                     | -  | -  | -  | ❌  | ✅  | ✅  | ✅  | ✅  |
-| **Chambre existe et disponible**                      | -  | -  | -  | -  | ❌  | ✅  | ✅  | ✅  |
+| **Précondition**                                       | 1  | 2  | 3  | 4  | 5  | 8  |
+|--------------------------------------------------------|----|----|----|----|----|----|
+| **ID du client bien formé (¬ null ∧ ¬ vide)**         | ❌  | ✅  | ✅  | ✅  | ✅  |  ✅  |
+| **ID de la chambre bien formé (¬ null ∧ ¬ vide)**     | -  | ❌  | ✅  | ✅  | ✅  |  ✅  |
+| **Date de début et de fin bien formées**              | -  | -  | ❌  | ✅  | ✅  |  ✅  |
+| **Client existe dans le système**                     | -  | -  | -  | ❌  | ✅  |  ✅  |
+| **Chambre existe et disponible**                      | -  | -  | -  | -  | ❌  |  ✅  |
 | **Postcondition**                                     |    |    |    |    |    |    |    |    |
-| **Réservation ajoutée**                               | ❌  | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  | ✅  |
-| **Chambre marquée comme occupée**                     | -  | -  | -  | -  | -  | -  | ❌  | ✅  |
-| **Nombre total de réservations mis à jour**           | ❌  | ❌  | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  |
-| **Nombre de jeux de tests**                           | 2  | 2  | 2  | 1  | 1  | 1  | 1  | 1  |
+| **Réservation ajoutée**                               | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  |
+| **Chambre marquée comme occupée**                     | -  | -  | -  | -  | -  |  ✅  |
+| **Nombre total de réservations mis à jour**           | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  |
+| **Nombre de jeux de tests**                           | 2  | 2  | 2  | 1  | 1  | 1  |
 
 
 ## 6️⃣ Conception Préliminaire – Diagramme de Classes
