@@ -1,4 +1,5 @@
 @startuml
+left to right direction
 class Utilisateur {
   id : int
   nom : string
@@ -35,6 +36,8 @@ Utilisateur <|-- Client
 Utilisateur <|-- Admin
 
 Client "1" -- "0..*" Reservation
+Admin "1" -- "0..*" Reservation
+Admin "1" -- "0..*" Chambre
+Admin "1" -- "0..*" Client
 Reservation "1" -- "1" Chambre
-
 @enduml
