@@ -10,10 +10,10 @@ rectangle "Gérer les clients" {
   usecase "Supprimer un client" as UC6_3
   usecase "Consulter la liste des clients" as UC6_4
   
-  UC6 ..> UC6_1 : <<extend>>
+  UC6 <.. UC6_1 : <<extend>>
   
-  UC6 ..> UC6_3 : <<extend>>
-  UC6 ..> UC6_4 : <<extend>>
+  UC6 <.. UC6_3 : <<extend>>
+  UC6 <.. UC6_4 : <<extend>>
 }
 
 rectangle "Gérer les chambres" {
@@ -23,10 +23,10 @@ rectangle "Gérer les chambres" {
   usecase "Supprimer une chambre" as UC7_3
   usecase "Consulter la disponibilité" as UC7_4
 
-  UC7 ..> UC7_1 : <<extend>>
-  UC7 ..> UC7_2 : <<extend>>
-  UC7 ..> UC7_3 : <<extend>>
-  UC7 ..> UC7_4 : <<extend>>
+  UC7 <.. UC7_1 : <<extend>>
+  UC7 <.. UC7_2 : <<extend>>
+  UC7 <.. UC7_3 : <<extend>>
+  UC7 <.. UC7_4 : <<extend>>
 }
 
 rectangle "Gérer les réservations" {
@@ -36,10 +36,10 @@ rectangle "Gérer les réservations" {
   usecase "Annuler une réservation (Admin)" as UC8_3
   usecase "Consulter les réservations" as UC8_4
 
-  UC8 ..> UC8_1 : <<extend>>
-   UC8 ..> UC8_2 : <<extend>>
-  UC8 ..> UC8_3 : <<extend>>
-  UC8 ..> UC8_4 : <<extend>>
+  UC8 <.. UC8_1 : <<extend>>
+   UC8 <.. UC8_2 : <<extend>>
+  UC8 <.. UC8_3 : <<extend>>
+  UC8 <.. UC8_4 : <<extend>>
 }
 
 Administrateur -- UC6
