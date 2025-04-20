@@ -103,8 +103,8 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 
 ### 📊 Table de décision des tests  
 
-| **Précondition**                                        | 1  | 2  | 3  | 4  | 5  | 6  | 7  |
-|---------------------------------------------------------|----|----|----|----|----|----|----|
+| **Précondition**                                        | 1  | 2  | 3  | 4  | 5  | 
+|---------------------------------------------------------|----|----|----|----|----|
 | **ID réservation bien formé (¬ null ∧ ¬ vide)**        | ❌  | ✅  | ✅  | ✅  |  ✅  |
 | **Réservation existe dans le système**                 | -  | ❌  | ✅  | ✅  |  ✅  |
 | **Réservation toujours active (non expirée)**          | -  | -  | ❌  | ✅  |  ✅  |
