@@ -19,12 +19,12 @@ rectangle "Gérer les clients" {
 rectangle "Gérer les chambres" {
   usecase "Gérer les chambres" as UC7
   usecase "Ajouter une chambre" as UC7_1
-  
+   usecase "Modifier une chambre" as UC7_2
   usecase "Supprimer une chambre" as UC7_3
   usecase "Consulter la disponibilité" as UC7_4
 
   UC7 ..> UC7_1 : <<extend>>
-  
+  UC7 ..> UC7_2 : <<extend>>
   UC7 ..> UC7_3 : <<extend>>
   UC7 ..> UC7_4 : <<extend>>
 }
@@ -32,12 +32,12 @@ rectangle "Gérer les chambres" {
 rectangle "Gérer les réservations" {
   usecase "Gérer les réservations" as UC8
   usecase "Ajouter une réservation" as UC8_1
-  
+  usecase "modifier une réservation" as UC8_2
   usecase "Annuler une réservation (Admin)" as UC8_3
   usecase "Consulter les réservations" as UC8_4
 
   UC8 ..> UC8_1 : <<extend>>
-  
+   UC8 ..> UC8_2 : <<extend>>
   UC8 ..> UC8_3 : <<extend>>
   UC8 ..> UC8_4 : <<extend>>
 }
