@@ -105,15 +105,15 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 
 | **Précondition**                                        | 1  | 2  | 3  | 4  | 5  | 6  | 7  |
 |---------------------------------------------------------|----|----|----|----|----|----|----|
-| **ID réservation bien formé (¬ null ∧ ¬ vide)**        | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| **Réservation existe dans le système**                 | -  | ❌  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| **Réservation toujours active (non expirée)**          | -  | -  | ❌  | ✅  | ✅  | ✅  | ✅  |
-| **Administrateur authentifié**                         | -  | -  | -  | ❌  | ✅  | ✅  | ✅  |
-| **Postcondition**                                      |    |    |    |    |    |    |    |
-| **Réservation supprimée du système**                   | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  | ✅  |
-| **Chambre marquée comme disponible**                   | -  | -  | -  | -  | -  | ❌  | ✅  |
-| **Nombre total de réservations mis à jour**            | ❌  | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  |
-| **Nombre de jeux de tests**                            | 2  | 1  | 1  | 1  | 1  | 1  | 1  |
+| **ID réservation bien formé (¬ null ∧ ¬ vide)**        | ❌  | ✅  | ✅  | ✅  |  ✅  |
+| **Réservation existe dans le système**                 | -  | ❌  | ✅  | ✅  |  ✅  |
+| **Réservation toujours active (non expirée)**          | -  | -  | ❌  | ✅  |  ✅  |
+| **Administrateur authentifié**                         | -  | -  | -  | ❌   | ✅  |
+| **Postcondition**                                      |    |    |    |      |    |
+| **Réservation supprimée du système**                   | ❌  | ❌  | ❌  | ❌  |  ✅  |
+| **Chambre marquée comme disponible**                   | -  | -  | -  | -  | ✅  |
+| **Nombre total de réservations mis à jour**            | ❌  | ❌  | ❌  | ❌   | ✅  |
+| **Nombre de jeux de tests**                            | 2  | 1  | 1  | 1  | 1  | 
 
 ---
 
