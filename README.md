@@ -18,16 +18,16 @@ Cette application vise à **simplifier la gestion des chambres, des clients et d
 ✔️ **Authentification des utilisateurs** (administrateurs et clients).  
 ✔️ **Interface utilisateur intuitive** avec menu interactif.  
 ✔️ **Gestion des clients** (ajout, suppression, consultation).  
-✔️ **Gestion des chambres** (ajout, suppression, consultation des disponibilités).  
-✔️ **Gestion des réservations** (ajout, suppression, consultation de l'historique).  
+✔️ **Gestion des chambres** (ajout, suppression, modification et consultation des disponibilités).  
+✔️ **Gestion des réservations** (ajout, suppression, modification et consultation de l'historique).  
 ✔️ **Sécurité des données** et gestion des rôles (droits d'accès différents pour administrateurs et clients).  
 
 ###  b) Acteurs et fonctionnalités attendues  
 
 #### 🛠 **Administrateur**  
 - ➕ Ajouter, supprimer et consulter la liste des **clients**.  
-- 🏨 Ajouter, supprimer et consulter la liste des **chambres**.  
-- 📅 Gérer les **réservations** (ajouter, supprimer, consulter toutes les réservations).  
+- 🏨 Ajouter, supprimer , modifier et consulter la liste des **chambres**.  
+- 📅 Gérer les **réservations** (ajouter, supprimer, modifier et  consulter toutes les réservations).  
 
 #### 🏷 **Client**  
 - 🛏 Réserver une **chambre**.  
