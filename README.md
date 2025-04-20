@@ -113,8 +113,8 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 | **Réservation supprimée du système**                   | ❌  | ❌  | ❌  | ❌  |  ✅  |
 | **Chambre marquée comme disponible**                   | -  | -  | -  | -  | ✅  |
 | **Nombre total de réservations mis à jour**            | ❌  | ❌  | ❌  | ❌   | ✅  |
+| **Nombre de jeux de tests**                           | 2  | 1  | 1  | 1  | 1  | 
 
- **Nombre de jeux de tests**    :                         16 
 
 ---
 
@@ -157,7 +157,7 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 
 ### 📊 Table de décision des tests  
 
-| **Précondition**                                       | 1  | 2  | 3  | 4  | 5  | 8  |
+| **Précondition**                                       | 1  | 2  | 3  | 4  | 5  | 6  |
 |--------------------------------------------------------|----|----|----|----|----|----|
 | **ID du client bien formé (¬ null ∧ ¬ vide)**         | ❌  | ✅  | ✅  | ✅  | ✅  |  ✅  |
 | **ID de la chambre bien formé (¬ null ∧ ¬ vide)**     | -  | ❌  | ✅  | ✅  | ✅  |  ✅  |
@@ -168,7 +168,7 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 | **Réservation ajoutée**                               | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  |
 | **Chambre marquée comme occupée**                     | -  | -  | -  | -  | -  |  ✅  |
 | **Nombre total de réservations mis à jour**           | ❌  | ❌  | ❌  | ❌  | ❌  | ✅  |
-| **Nombre de jeux de tests**                           | 2  | 2  | 2  | 1  | 1  | 1  |
+| **Nombre de jeux de tests**                           | 2  | 2  | 2  | 1  | 2  | 1  |
 
 
 ## 6️⃣ Conception Préliminaire – Diagramme de Classes
