@@ -113,7 +113,7 @@ Ce cas d’utilisation permet à un utilisateur (Admin) de réserver une chambre
 | **Réservation supprimée du système**                   | ❌  | ❌  | ❌  | ❌  |  ✅  |
 | **Chambre marquée comme disponible**                   | -  | -  | -  | -  | ✅  |
 | **Nombre total de réservations mis à jour**            | ❌  | ❌  | ❌  | ❌   | ✅  |
-| **Nombre de jeux de tests**                            | 2  | 1  | 1  | 1  | 1  | 
+| **Nombre de jeux de tests**                            | 16 | 
 
 ---
 
