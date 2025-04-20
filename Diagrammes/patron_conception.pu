@@ -1,6 +1,8 @@
 @startuml
+left to right direction
 skinparam packageStyle rectangle
 skinparam classAttributeIconSize 0
+skinparam linetype ortho
 
 package "Vue (View)" {
   class InterfaceUtilisateur {
@@ -15,6 +17,21 @@ package "Contrôleur (Controller)" {
     +ajouterReservation()
     +annulerReservation()
     +consulterReservation()
+    +consulterHistoriqueReservation()
+    +modifierReservation()
+  }
+
+  class ChambreController {
+    +ajouterChambre()
+    +annulerChambre()
+    +modifierChambre()
+    +consulterChambre()
+  }
+
+  class ClientController {
+    +ajouterClient()
+    +annulerClient()
+    +consulterClient()
   }
 }
 
@@ -38,12 +55,31 @@ package "Modèle (Model)" {
     -etat : string
     -prix : float
   }
+
+  class Admin {
+    -nom : string
+    -prenom : string
+    -email : string
+  }
 }
 
-' Associations
+' Relations entre les couches
 InterfaceUtilisateur --> ReservationController : actions utilisateur
-ReservationController --> Reservation : manipule
-ReservationController --> Client : consulte / vérifie
-ReservationController --> Chambre : vérifie / réserve
-ReservationController --> InterfaceUtilisateur : met à jour la vue
-@enduml
+InterfaceUtilisateur --> ChambreController
+InterfaceUtilisateur --> ClientController
+
+ReservationController --> Reservation : gère
+ReservationController --> Client
+ReservationController --> Chambre
+
+ChambreController --> Chambre : gère
+
+ClientController --> Client : gère
+Admin --> "Contrôleur (Controller)" 
+
+' Le contrôleur met à jour la vue
+ReservationController --> InterfaceUtilisateur : mise à jour vue
+ChambreController --> InterfaceUtilisateur
+ClientController --> InterfaceUtilisateur
+
+@endum
